@@ -1,0 +1,164 @@
+{
+	"data": [
+		{
+			"id": 0,
+			"first_name": "Shanie",
+			"last_name": "Morissette",
+			"car": "A8",
+			"carFuel": "Gasoline",
+			"amount": "296.47"
+		},
+		{
+			"id": 1,
+			"first_name": "Ima",
+			"last_name": "Adams",
+			"car": "Mustang",
+			"carFuel": "Gasoline",
+			"amount": "239.60"
+		},
+		{
+			"id": 2,
+			"first_name": "Jaqueline",
+			"last_name": "Wilkinson",
+			"car": "911",
+			"carFuel": "Gasoline",
+			"amount": "238.42"
+		},
+		{
+			"id": 3,
+			"first_name": "Harry",
+			"last_name": "Maggio",
+			"car": "Explorer",
+			"carFuel": "Gasoline",
+			"amount": "17.58"
+		},
+		{
+			"id": 4,
+			"first_name": "Dayne",
+			"last_name": "Lubowitz",
+			"car": "Mustang",
+			"carFuel": "Electric",
+			"amount": "572.65"
+		},
+		{
+			"id": 5,
+			"first_name": "Maureen",
+			"last_name": "Schulist",
+			"car": "2",
+			"carFuel": "Hybrid",
+			"amount": "455.22"
+		},
+		{
+			"id": 6,
+			"first_name": "Brett",
+			"last_name": "Leannon",
+			"car": "Focus",
+			"carFuel": "Hybrid",
+			"amount": "53.48"
+		},
+		{
+			"id": 7,
+			"first_name": "Eulalia",
+			"last_name": "Schulist",
+			"car": "F-150",
+			"carFuel": "Gasoline",
+			"amount": "322.38"
+		},
+		{
+			"id": 8,
+			"first_name": "Hellen",
+			"last_name": "Cormier",
+			"car": "Golf",
+			"carFuel": "Diesel",
+			"amount": "591.23"
+		},
+		{
+			"id": 9,
+			"first_name": "Gaetano",
+			"last_name": "Hermiston",
+			"car": "Golf",
+			"carFuel": "Hybrid",
+			"amount": "300.61"
+		},
+		{
+			"id": 10,
+			"first_name": "Makenna",
+			"last_name": "Becker",
+			"car": "Fiesta",
+			"carFuel": "Electric",
+			"amount": "451.40"
+		},
+		{
+			"id": 11,
+			"first_name": "Dudley",
+			"last_name": "Mills",
+			"car": "PT Cruiser",
+			"carFuel": "Gasoline",
+			"amount": "8.35"
+		},
+		{
+			"id": 12,
+			"first_name": "Makenzie",
+			"last_name": "Carroll",
+			"car": "Volt",
+			"carFuel": "Hybrid",
+			"amount": "688.01"
+		},
+		{
+			"id": 13,
+			"first_name": "Miller",
+			"last_name": "Bechtelar",
+			"car": "Prius",
+			"carFuel": "Hybrid",
+			"amount": "227.37"
+		},
+		{
+			"id": 14,
+			"first_name": "Anabel",
+			"last_name": "Spinka",
+			"car": "Civic",
+			"carFuel": "Electric",
+			"amount": "505.03"
+		},
+		{
+			"id": 15,
+			"first_name": "Rosario",
+			"last_name": "Stroman",
+			"car": "Malibu",
+			"carFuel": "Diesel",
+			"amount": "144.10"
+		},
+		{
+			"id": 16,
+			"first_name": "Neal",
+			"last_name": "Wuckert",
+			"car": "Roadster",
+			"carFuel": "Gasoline",
+			"amount": "828.28"
+		},
+		{
+			"id": 17,
+			"first_name": "Jermaine",
+			"last_name": "Yost",
+			"car": "Golf",
+			"carFuel": "Electric",
+			"amount": "112.29"
+		},
+		{
+			"id": 18,
+			"first_name": "Matilde",
+			"last_name": "Kirlin",
+			"car": "Escalade",
+			"carFuel": "Electric",
+			"amount": "995.50"
+		},
+		{
+			"id": 19,
+			"first_name": "Bradley",
+			"last_name": "Weber",
+			"car": "Camry",
+			"carFuel": "Electric",
+			"amount": "250.98"
+		}
+	]
+}
