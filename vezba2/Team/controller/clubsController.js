@@ -1,14 +1,27 @@
 const mongoose = require('mongoose');
 const Club = require('../models/club')
 
+
 const getAllClubs = async (req, res) => {
   
-    const clubs = await Club.find();
-     
+  const clubs = await Club.find().populate('country', 'name');
+   
+res.send({
+  error: false,
+  message: `All clubs from the database`,
+  clubs: clubs,
+  country: clubs.country
+});
+};
+
+const getClubById = async (req, res) => {
+    const club = await Club.findById(req.params.id).populate('country', 'name');
+    
   res.send({
     error: false,
-    message: `All clubs from the database`,
-    clubs: clubs
+    message: `/`,
+    club: club,
+    country: club.country
   });
 };
 
@@ -19,7 +32,7 @@ const getClubCreate = async (req, res) => {
 
   res.send({
     error: false,
-    message: 'New player has been created',
+    message: 'New club has been created',
     club: club
   });
 };
@@ -30,14 +43,14 @@ const getClubUpdate = async (req, res) => {
 
   res.send({
     error: false,
-    message: `Player with id #${club._id} has been updated`,
+    message: `Club with id #${club._id} has been updated`,
     club: club
   });
 };
 
 const getClubDeleted = async (req, res) => {
   // TODO: Delete an employee
-  await Player.findByIdAndDelete(req.params.id);
+  await Club.findByIdAndDelete(req.params.id);
 
   res.send({
     error: false,
@@ -49,6 +62,7 @@ const getClubDeleted = async (req, res) => {
 
 module.exports = { 
     getAllClubs, 
+    getClubById,
     getClubCreate, 
     getClubUpdate, 
     getClubDeleted

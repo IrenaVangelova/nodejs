@@ -41,12 +41,13 @@ const getPlayerCreate = async (req, res) => {
 
 const getPlayerUpdate = async (req, res) => {
   await Player.findByIdAndUpdate(req.params.id, req.body);
-  const player = await Player.findById(req.params.id);
-
+  const player = await Player.findById(req.params.id).populate('club', 'name');
+                                                      
   res.send({
     error: false,
     message: `Player with id #${player._id} has been updated`,
     player: player
+
   });
 };
 
