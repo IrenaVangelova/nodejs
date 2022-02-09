@@ -10,6 +10,7 @@ const leaguesRouter = require('./routes/leagues');
 const coachesRouter = require('./routes/coaches');
 const agentsRouter = require('./routes/agents');
 const countriesRouter = require('./routes/countries');
+images = [{image:"http://nuvotera.com/wp-content/uploads/2013/10/email-protection-banner-2.jpg"}]
 const mongoose = require('mongoose');
 
 

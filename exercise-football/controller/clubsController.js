@@ -10,7 +10,7 @@ const getAll = async (req, res) => {
 };
 
 const getCreate = async (req, res) => {
-  // TODO: Create new employee
+
   res.render('clubs/create');
 };
 
@@ -22,14 +22,18 @@ const postCreate = async (req, res) => {
 };
 
 const getUpdate = async (req, res) => {
-  await Club.findByIdAndUpdate(req.params.id, req.body);
   const club = await Club.findById(req.params.id);
 
-  res.redirect(`/clubs/${club_id}`);
+  res.render(`clubs/edit` , { club });
+};
+
+const postUpdate = async (req, res) => {
+  await Club.findByIdAndUpdate(req.params.id, req.body);
+
+  res.redirect(`/clubs`);
 };
 
 const getDeleted = async (req, res) => {
-  // TODO: Delete an employee
   await Club.findByIdAndDelete(req.params.id);
 
   res.redirect('/clubs');
@@ -42,5 +46,6 @@ module.exports = {
     postCreate,
     getCreate, 
     getUpdate, 
+    postUpdate,
     getDeleted
 }

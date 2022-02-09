@@ -4,8 +4,9 @@ const controller = require('../controller/clubsController');
 
 router.get('/', controller.getAll)
       .get('/create', controller.getCreate)
+      .get('/:id/update', controller.getUpdate)
       .post('/', controller.postCreate)
-      .patch('/:id/update', controller.getUpdate)
-      .delete('/:id/delete', controller.getDeleted)
+      .post('/:id/update', controller.postUpdate)
+      .get('/:id/delete', controller.getDeleted)
 
 module.exports = router;

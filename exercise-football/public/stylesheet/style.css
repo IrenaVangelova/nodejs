@@ -1,0 +1,32 @@
+.container{
+    background-image: url('../images/2.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+a{
+    color: white;
+}
+
+#navbarNav a{
+    color: white;
+}
+
+table, th, td{
+    color: white;
+}
+
+h3{
+    color: white;
+}
+
+form{
+    color: white;
+}
+
+
+
+
+
+
+
