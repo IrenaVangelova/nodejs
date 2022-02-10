@@ -36,7 +36,7 @@ const postUpdate = async (req, res) => {
 const getDeleted = async (req, res) => {
   await Club.findByIdAndDelete(req.params.id);
 
-  res.redirect('/clubs');
+  res.status(200).send({});
 };
 
 

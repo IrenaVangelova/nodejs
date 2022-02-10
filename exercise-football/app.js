@@ -14,9 +14,6 @@ images = [{image:"http://nuvotera.com/wp-content/uploads/2013/10/email-protectio
 const mongoose = require('mongoose');
 
 
-
-
-
 // MVC: Model View Controller
 
 const app = express();

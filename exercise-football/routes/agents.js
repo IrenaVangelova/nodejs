@@ -3,8 +3,10 @@ var router = express.Router();
 const controller = require('../controller/agentsController');
 
 router.get('/', controller.getAll)
-      .post('/', controller.getCreate)
-      .patch('/:id', controller.getUpdate)
+      .get('/create', controller.getCreate)
+      .get('/:id/update', controller.getUpdate)
+      .post('/', controller.postCreate)
+      .post('/:id/update', controller.postUpdate)
       .delete('/:id', controller.getDeleted)
 
 module.exports = router;

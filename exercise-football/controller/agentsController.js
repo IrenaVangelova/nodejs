@@ -3,53 +3,55 @@ const Agent = require('../models/agent')
 
 const getAll = async (req, res) => {
   
-    const agents = await Agent.find();
-     
-  res.send({
-    error: false,
-    message: `All agents from the database`,
-    agents: agents
-  });
+  const agents = await Agent.find();
+
+  res.render('agents/index', { agents });
 };
 
 
 const getCreate = async (req, res) => {
-  // TODO: Create new employee
-  const agent = await Agent.create(req.body);
 
-  res.send({
-    error: false,
-    message: 'New agent has been created',
-    agent: agent
-  });
+  const agents = await Agent.find();
+
+  res.render('agents/create', { agents });
+};
+
+
+const postCreate = async (req, res) => {
+
+  await Agent.create(req.body);
+
+  res.redirect('/agents');
 };
 
 const getUpdate = async (req, res) => {
-  await Agent.findByIdAndUpdate(req.params.id, req.body);
+
   const agent = await Agent.findById(req.params.id);
 
-  res.send({
-    error: false,
-    message: `Agent with id #${agent._id} has been updated`,
-    agent: agent
-  });
+  res.render('agents/edit' , { agent });
+};
+
+const postUpdate = async (req, res) => {
+
+  await Agent.findByIdAndUpdate(req.params.id, req.body);
+ 
+  res.redirect('/agents');                                             
 };
 
 const getDeleted = async (req, res) => {
-  // TODO: Delete an employee
+
   await Agent.findByIdAndDelete(req.params.id);
 
-  res.send({
-    error: false,
-    message: `Agent with id #${req.params.id} has been deleted`
-  });
+  res.send({});
 };
 
 
 
 module.exports = { 
     getAll, 
-    getCreate, 
-    getUpdate, 
+    getCreate,
+    postCreate, 
+    getUpdate,
+    postUpdate, 
     getDeleted
 }
