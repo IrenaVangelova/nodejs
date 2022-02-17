@@ -21,6 +21,10 @@ const clubSchema = mongoose.Schema({
         ref: 'league',
         type: mongoose.Types.ObjectId
     },
+    players: [{
+      type: mongoose.Types.ObjectId,
+      ref: 'player'
+    }]
   }, { timestamps: true });
 
   module.exports = mongoose.model('club', clubSchema);

@@ -45,6 +45,13 @@ const getDeleted = async (req, res) => {
   res.send({});
 };
 
+const getView = async (req, res) => {
+  const agent = await Agent.findById(req.params.id).populate('players');
+
+  console.log(agent)
+  res.render(`agents/view` , { agent });
+};
+
 
 
 module.exports = { 
@@ -53,5 +60,6 @@ module.exports = {
     postCreate, 
     getUpdate,
     postUpdate, 
-    getDeleted
+    getDeleted,
+    getView
 }

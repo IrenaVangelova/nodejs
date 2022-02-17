@@ -48,7 +48,7 @@
       <% agents.forEach(agent=> { %>
         <tr>
           <th scope="row">
-            <a href="/agents/<%= agent._id %>">
+            <a href="/agents/<%= agent._id %>/view">
               <%= agent._id %>
             </a>
           </th>
@@ -57,7 +57,7 @@
           </td>
 
           <td>
-            <a class="btn btn-raised btn-secondary" href="/agents/<%= agent._id %>/update ">Edit</a>
+            <a class="btn btn-raised btn-secondary" href="/agents/<%= agent._id %>">Edit</a>
             <a class="btn btn-raised btn-danger m-1" href="javascript:;" onclick="deleteAgent('<%= agent._id %>')">Delete</a>
           </td>
         </tr>

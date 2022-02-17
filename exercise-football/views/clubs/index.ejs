@@ -46,13 +46,13 @@
         <% clubs.forEach(club => { %>
           <tr>
             <th scope="row">
-              <a href="/clubs/<%= club._id %>"><%= club._id %></a>
+              <a href="/clubs/<%= club._id %>/view"><%= club._id %></a>
             </th>
             <td><%= club.name %></td>
             <td><%= club.city %></td>
             <td><%= club.year %></td>
             
-            <td><a class="btn btn-raised btn-secondary" href="/clubs/<%= club._id %>/update ">Edit</a>
+            <td><a class="btn btn-raised btn-secondary" href="/clubs/<%= club._id %>">Edit</a>
                 <a class="btn btn-raised btn-danger m-1" href="javascript:;" onclick="deleteClub('<%= club._id %>')">Delete</a>
             </td>
           </tr>

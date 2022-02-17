@@ -27,6 +27,13 @@ const getUpdate = async (req, res) => {
   res.render(`clubs/edit` , { club });
 };
 
+const getView = async (req, res) => {
+  const club = await Club.findById(req.params.id).populate('players');
+
+  console.log(club)
+  res.render(`clubs/view` , { club });
+};
+
 const postUpdate = async (req, res) => {
   await Club.findByIdAndUpdate(req.params.id, req.body);
 
@@ -44,7 +51,8 @@ const getDeleted = async (req, res) => {
 module.exports = { 
     getAll, 
     postCreate,
-    getCreate, 
+    getCreate,
+    getView, 
     getUpdate, 
     postUpdate,
     getDeleted
