@@ -71,17 +71,21 @@
           </td>
           <td>
             <% if (player.club) { %>
-             <a href="/clubs/<%= player.club._id %>/view"><%= player.club.name %></a>
-            <% } else { %>
-              /
-            <% } %>
+              <a href="/clubs/<%= player.club._id %>/view">
+                <%= player.club.name %>
+              </a>
+              <% } else { %>
+                /
+                <% } %>
           </td>
           <td>
             <% if (player.agent) { %>
-             <a href="/agents/<%= player.agent._id %>/view"><%= player.agent.name %></a>
-            <% } else { %>
-              /
-            <% } %>
+              <a href="/agents/<%= player.agent._id %>/view">
+                <%= player.agent.name %>
+              </a>
+              <% } else { %>
+                /
+                <% } %>
           </td>
           <td>
             <a class="btn btn-raised btn-secondary" href="/players/<%= player._id %>">Edit</a>

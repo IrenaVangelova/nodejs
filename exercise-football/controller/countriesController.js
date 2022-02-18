@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 const Country = require('../models/country')
 
 const getAll = async (req, res) => {
-  
-    const countries = await Country.find();
-     
+
+  const countries = await Country.find();
+
   res.send({
     error: false,
     message: `All countries from the database`,
@@ -47,9 +47,9 @@ const getDeleted = async (req, res) => {
 
 
 
-module.exports = { 
-    getAll, 
-    getCreate, 
-    getUpdate, 
-    getDeleted
+module.exports = {
+  getAll,
+  getCreate,
+  getUpdate,
+  getDeleted
 }

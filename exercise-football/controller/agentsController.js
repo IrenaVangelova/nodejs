@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Agent = require('../models/agent')
 
 const getAll = async (req, res) => {
-  
+
   const agents = await Agent.find();
 
   res.render('agents/index', { agents });
@@ -28,14 +28,14 @@ const getUpdate = async (req, res) => {
 
   const agent = await Agent.findById(req.params.id);
 
-  res.render('agents/edit' , { agent });
+  res.render('agents/edit', { agent });
 };
 
 const postUpdate = async (req, res) => {
 
   await Agent.findByIdAndUpdate(req.params.id, req.body);
- 
-  res.redirect('/agents');                                             
+
+  res.redirect('/agents');
 };
 
 const getDeleted = async (req, res) => {
@@ -49,17 +49,17 @@ const getView = async (req, res) => {
   const agent = await Agent.findById(req.params.id).populate('players');
 
   console.log(agent)
-  res.render(`agents/view` , { agent });
+  res.render(`agents/view`, { agent });
 };
 
 
 
-module.exports = { 
-    getAll, 
-    getCreate,
-    postCreate, 
-    getUpdate,
-    postUpdate, 
-    getDeleted,
-    getView
+module.exports = {
+  getAll,
+  getCreate,
+  postCreate,
+  getUpdate,
+  postUpdate,
+  getDeleted,
+  getView
 }

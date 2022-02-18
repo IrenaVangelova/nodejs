@@ -10,7 +10,7 @@ const leaguesRouter = require('./routes/leagues');
 const coachesRouter = require('./routes/coaches');
 const agentsRouter = require('./routes/agents');
 const countriesRouter = require('./routes/countries');
-images = [{image:"http://nuvotera.com/wp-content/uploads/2013/10/email-protection-banner-2.jpg"}]
+images = [{ image: "http://nuvotera.com/wp-content/uploads/2013/10/email-protection-banner-2.jpg" }]
 const mongoose = require('mongoose');
 
 
@@ -43,12 +43,12 @@ app.use('/countries', countriesRouter);
 
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

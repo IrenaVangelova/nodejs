@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const Coach = require('../models/coach')
 
-const getAll= async (req, res) => {
-  
-    const coaches = await Coach.find();
-     
+const getAll = async (req, res) => {
+
+  const coaches = await Coach.find();
+
   res.send({
     error: false,
     message: `All coaches from the database`,
@@ -47,9 +47,9 @@ const getDeleted = async (req, res) => {
 
 
 
-module.exports = { 
-    getAll, 
-    getCreate, 
-    getUpdate, 
-    getDeleted
+module.exports = {
+  getAll,
+  getCreate,
+  getUpdate,
+  getDeleted
 }

@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 const League = require('../models/league')
 
 const getAll = async (req, res) => {
-  
-    const leagues = await League.find();
-     
+
+  const leagues = await League.find();
+
   res.send({
     error: false,
     message: `All leagues from the database`,
@@ -46,9 +46,9 @@ const getDeleted = async (req, res) => {
 
 
 
-module.exports = { 
-    getAll, 
-    getCreate, 
-    getUpdate, 
-    getDeleted
+module.exports = {
+  getAll,
+  getCreate,
+  getUpdate,
+  getDeleted
 }

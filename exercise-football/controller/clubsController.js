@@ -3,9 +3,9 @@ const Club = require('../models/club')
 
 
 const getAll = async (req, res) => {
-  
+
   const clubs = await Club.find();
-   
+
   res.render('clubs/index', { clubs });
 };
 
@@ -24,14 +24,14 @@ const postCreate = async (req, res) => {
 const getUpdate = async (req, res) => {
   const club = await Club.findById(req.params.id);
 
-  res.render(`clubs/edit` , { club });
+  res.render(`clubs/edit`, { club });
 };
 
 const getView = async (req, res) => {
   const club = await Club.findById(req.params.id).populate('players');
 
   console.log(club)
-  res.render(`clubs/view` , { club });
+  res.render(`clubs/view`, { club });
 };
 
 const postUpdate = async (req, res) => {
@@ -48,12 +48,12 @@ const getDeleted = async (req, res) => {
 
 
 
-module.exports = { 
-    getAll, 
-    postCreate,
-    getCreate,
-    getView, 
-    getUpdate, 
-    postUpdate,
-    getDeleted
+module.exports = {
+  getAll,
+  postCreate,
+  getCreate,
+  getView,
+  getUpdate,
+  postUpdate,
+  getDeleted
 }
